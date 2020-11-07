@@ -1,0 +1,26 @@
+/* .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  } */
+.imagedetails {
+  background-color: darkred;
+  padding: 20px 0;
+}
+.image {
+  margin-top: 10px;
+}
+img {
+  height: 400px;
+  width: auto;
+}
+.img {
+  display: flex;
+  /* align-content: center; */
+  margin-bottom: 15px;
+  justify-content: center;
+}
+mat-card {
+  background-color: burlywood;
+  margin: auto auto;
+  width: 80vw;
+}

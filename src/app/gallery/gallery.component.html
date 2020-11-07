@@ -1,0 +1,24 @@
+<section class="gallery" color="accent">
+  <div class="container">
+    <mat-card
+      class="card"
+      (click)="goToImageDetails(i)"
+      *ngFor="let image of images; let i = index"
+    >
+      <div class="card-item">
+        <div>
+          <h3>{{ image.title | uppercase }}</h3>
+        </div>
+        <img
+          src="https://farm{{ image.farm }}.staticflickr.com/{{
+            image.server
+          }}/{{ image.id }}_{{ image.secret }}.jpg"
+          div-image
+          alt="image"
+          title="{{ image.title }}"
+        />
+        <div></div>
+      </div>
+    </mat-card>
+  </div>
+</section>

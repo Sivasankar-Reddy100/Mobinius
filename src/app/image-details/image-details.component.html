@@ -1,0 +1,32 @@
+<section class="imagedetails">
+  <mat-card>
+    <h2 *ngIf="!downloaded">
+      ....Loading the image..Download Progress not supported
+    </h2>
+    <mat-card-header>
+      <div
+        mat-card-avatar
+        style="background-image: url({{ image }}); background-size: cover;"
+      ></div>
+      <!-- <div mat-card-avatar [ngStyle]="'avatarStyle'"></div> -->
+      <!-- <div [style.background-image]="{{image}}">jhhgjgfdg</div> -->
+      <mat-card-title>{{ iDetails.owner.username }}</mat-card-title>
+      <mat-card-subtitle>{{ iDetails.title._content }}</mat-card-subtitle>
+    </mat-card-header>
+    <div class="img" *ngIf="downloaded">
+      <img src="{{ image }}" title="{{ iDetails.title._content }}" />
+    </div>
+    <mat-card-content>
+      <p *ngIf="!iDetails.description._content">No Description</p>
+      <p *ngIf="iDetails.description._content">
+        Description : {{ iDetails.description._content }}
+      </p>
+      <p>Posted On {{ iDetails.dates.posted | date }}</p>
+      <p>No of Views : {{ iDetails.views }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</section>
